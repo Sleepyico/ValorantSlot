@@ -20,6 +20,12 @@ export type Agent = {
   displayName: string;
   displayIcon: string;
   fullPortrait: string;
+  role: {
+    uuid: string;
+    displayName: string;
+    description: string;
+    displayIcon: string;
+  };
 };
 
 export async function fetchAgents(): Promise<Agent[]> {
@@ -32,5 +38,11 @@ export async function fetchAgents(): Promise<Agent[]> {
     displayName: agent.displayName,
     displayIcon: agent.displayIcon,
     fullPortrait: agent.fullPortrait,
+    role: {
+      uuid: agent.role.uuid,
+      displayName: agent.role.displayName,
+      description: agent.role.description,
+      displayIcon: agent.role.displayIcon,
+    },
   }));
 }
