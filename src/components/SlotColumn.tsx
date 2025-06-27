@@ -70,7 +70,7 @@ export default function SlotColumn({
   const agent = agents[currentIndex];
 
   return (
-    <div className="relative w-24 h-28 overflow-hidden border-2 border-yellow-500 rounded bg-zinc-900 shadow-md">
+    <div className="relative w-full h-28 overflow-hidden border-2 border-yellow-500 rounded bg-zinc-900 shadow-md last:col-span-2 md:last:col-span-1">
       <div className="flex flex-col items-center justify-center h-28 w-full">
         {agent?.displayIcon && (
           <Image
